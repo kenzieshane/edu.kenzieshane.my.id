@@ -1,274 +1,246 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panduan Belajar IPA Kelas VII-IX</title>
+    <title>Reflection - A Tale of Vengeance</title>
     <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
             line-height: 1.6;
-            color: #333;
+        }
+        
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f9fc;
+            padding: 0 20px;
         }
+        
+        /* Header Styles */
         header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 8px;
-            margin-top: 40px;
-        }
-        h3 {
-            color: #2980b9;
-            margin-top: 25px;
-        }
-        .grade-section {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .topic-card {
-            background-color: #ecf0f1;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 0 4px 4px 0;
-        }
-        .topic-card h4 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .example-box {
-            background-color: #e8f4f8;
-            border: 1px dashed #3498db;
-            padding: 12px;
-            border-radius: 4px;
-            margin: 10px 0;
-        }
-        nav {
-            background-color: #3498db;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav li {
-            margin: 0 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer {
+            align-items: center;
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #2c3e50;
-            color: white;
-            border-radius: 8px;
+            padding: 0 20px;
         }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #c1121f;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: #aaa;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background: #c1121f;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            background: #9e0f1a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #c1121f;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #c1121f;
+            margin: 15px auto;
+        }
+        
+        /* Synopsis Section */
+        .synopsis {
+            background-color: #111;
+            text-align: center;
+        }
+        
+        .synopsis p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #c1121f;
+            margin: 30px 0;
+        }
+        
+        /* Cast Section */
+        .cast {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .cast-member {
+            width: 200px;
+            text-align: center;
+        }
+        
+        .cast-member img {
+            width: 100%;
+            border-radius: 50%;
+            border: 3px solid #c1121f;
+            margin-bottom: 15px;
+        }
+        
+        /* Trailer Section */
+        .trailer {
+            background-color: #111;
+            text-align: center;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Release Section */
+        .release-date {
+            text-align: center;
+            font-size: 2rem;
+            margin: 30px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: #e0e0e0;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #c1121f;
+        }
+        
+        .hashtags {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
+            .logo {
+                font-size: 2rem;
             }
-            nav li {
-                margin: 5px 0;
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header/Hero Section -->
     <header>
-        <h1>Panduan Belajar IPA Kelas VII-IX</h1>
-        <p>Berdasarkan Kisi-Kisi Kurikulum K-13 & Kurikulum Merdeka</p>
+        <h1 class="logo">Reflection</h1>
+        <p class="tagline">Fear can make you a monster.<a href="#trailer" class="btn">Watch Trailer</a>
+        <a href="#tickets" class="btn">Behind the scene</a>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#kelas7">Kelas VII</a></li>
-            <li><a href="#kelas8">Kelas VIII</a></li>
-            <li><a href="#kelas9">Kelas IX</a></li>
-            <li><a href="#tips">Tips Belajar</a></li>
-        </ul>
-    </nav>
-
-    <section id="kelas7" class="grade-section">
-        <h2>Materi Kelas VII</h2>
-        
-        <div class="topic-card">
-            <h4>1. Pengukuran</h4>
-            <p><strong>Konsep:</strong> Pengukuran adalah proses membandingkan besaran yang diukur dengan satuan standar. Contoh besaran: panjang, massa, waktu, suhu.</p>
-            <p><strong>Satuan baku:</strong> meter (m), kilogram (kg), sekon (s), Kelvin (K).</p>
-            <div class="example-box">
-                <p><strong>Contoh soal:</strong> Jika hasil pengukuran panjang benda adalah 15,6 cm, berapa panjang dalam meter?</p>
-                <p><strong>Pembahasan:</strong> 15,6 cm = 0,156 m (karena 1 m = 100 cm)</p>
-            </div>
-        </div>
-
-        <div class="topic-card">
-            <h4>2. Zat dan Wujudnya</h4>
-            <p><strong>Wujud zat:</strong> padat, cair, gas. Perubahan wujud: mencair, membeku, menguap, mengembun, menyublim, mengkristal.</p>
-            <p><strong>Zat tunggal:</strong> unsur (contoh: O₂, Fe) dan senyawa (contoh: H₂O, NaCl). Campuran: homogen (larutan) dan heterogen (suspensi).</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>3. Ekosistem</h4>
-            <p><strong>Komponen biotik:</strong> makhluk hidup (produsen, konsumen, pengurai). <strong>Abiotik:</strong> cahaya, air, tanah, suhu.</p>
-            <p><strong>Interaksi:</strong> simbiosis (mutualisme, komensalisme, parasitisme), predasi, kompetisi.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>4. Pencemaran Lingkungan</h4>
-            <p><strong>Jenis pencemaran:</strong> udara, air, tanah, suara. Dampak: gangguan kesehatan, kerusakan ekosistem.</p>
-            <p><strong>Solusi:</strong> reboisasi, pengolahan limbah, mengurangi plastik, menggunakan energi ramah lingkungan.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>5. Suhu dan Kalor</h4>
-            <p><strong>Suhu:</strong> derajat panas (satuan: °C, K, °F). Konversi: °C = 5/9 × (°F - 32).</p>
-            <p><strong>Kalor:</strong> energi panas (satuan: Joule). Perpindahan kalor: konduksi, konveksi, radiasi.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>6. Tata Surya</h4>
-            <p><strong>Planet:</strong> Merkurius (terkecil), Venus (paling panas), Bumi (ada kehidupan), Mars (planet merah), Jupiter (terbesar), Saturnus (cincin), Uranus, Neptunus.</p>
-            <p><strong>Gerakan:</strong> rotasi (berputar pada sumbu) dan revolusi (mengelilingi matahari).</p>
-        </div>
-    </section>
-
-    <section id="kelas8" class="grade-section">
-        <h2>Materi Kelas VIII</h2>
-        
-        <div class="topic-card">
-            <h4>1. Gerak dan Hukum Newton</h4>
-            <p><strong>Hukum I Newton (Inersia):</strong> Benda diam tetap diam, benda bergerak tetap bergerak lurus beraturan kecuali ada gaya eksternal.</p>
-            <p><strong>Hukum II Newton:</strong> F = m × a (gaya = massa × percepatan).</p>
-            <p><strong>Hukum III Newton:</strong> Aksi-reaksi (gaya selalu berpasangan).</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>2. Usaha dan Energi</h4>
-            <p><strong>Usaha:</strong> W = F × s (gaya × perpindahan). Satuan: Joule.</p>
-            <p><strong>Energi:</strong> kinetik (½mv²), potensial (mgh), mekanik (Ek + Ep).</p>
-            <div class="example-box">
-                <p><strong>Contoh soal:</strong> Jika dua tim tarik tambang masing-masing menarik dengan gaya 200 N ke kanan dan 180 N ke kiri, berapa resultan gaya dan arahnya?</p>
-                <p><strong>Pembahasan:</strong> Resultan = 200 N - 180 N = 20 N ke kanan.</p>
-            </div>
-        </div>
-
-        <div class="topic-card">
-            <h4>3. Tekanan Zat Cair</h4>
-            <p><strong>Tekanan hidrostatis:</strong> P = ρ × g × h (massa jenis × gravitasi × kedalaman).</p>
-            <p><strong>Hukum Pascal:</strong> Tekanan pada fluida tertutup diteruskan sama besar ke segala arah.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>4. Getaran dan Gelombang</h4>
-            <p><strong>Getaran:</strong> gerak bolak-balik melalui titik setimbang. Periode (T): waktu satu getaran. Frekuensi (f): jumlah getaran per detik.</p>
-            <p><strong>Bunyi:</strong> gelombang longitudinal yang merambat melalui medium. Pemanfaatan: sonar, USG, alat musik.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>5. Sistem Organ Manusia</h4>
-            <p><strong>Sistem gerak:</strong> tulang (rangka) dan otot.</p>
-            <p><strong>Sistem pencernaan:</strong> mulut → kerongkongan → lambung → usus halus → usus besar.</p>
-            <p><strong>Sistem peredaran darah:</strong> jantung (pompa), arteri, vena, kapiler.</p>
-            <p><strong>Sistem ekskresi:</strong> ginjal (menyaring darah), kulit, paru-paru, hati.</p>
-        </div>
-    </section>
-
-    <section id="kelas9" class="grade-section">
-        <h2>Materi Kelas IX</h2>
-        
-        <div class="topic-card">
-            <h4>1. Reproduksi dan Perkembangan</h4>
-            <p><strong>Tumbuhan:</strong> vegetatif (alami: umbi, rhizoma; buatan: cangkok, stek) dan generatif (bunga).</p>
-            <p><strong>Manusia:</strong> pubertas, organ reproduksi, menstruasi, fertilisasi.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>2. Sistem Koordinasi</h4>
-            <p><strong>Sistem saraf:</strong> otak (serebrum, serebelum, batang otak), sumsum tulang belakang, neuron.</p>
-            <p><strong>Sistem hormon:</strong> kelenjar endokrin (hipofisis, tiroid, pankreas) menghasilkan hormon.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>3. Listrik dan Magnet</h4>
-            <p><strong>Listrik statis:</strong> muatan positif (proton) dan negatif (elektron). Hukum Coulomb: F = k(q₁q₂)/r².</p>
-            <p><strong>Listrik dinamis:</strong> arus listrik (I = V/R), rangkaian seri dan paralel.</p>
-            <p><strong>Induksi elektromagnetik:</strong> dasar kerja generator dan transformator.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>4. Bioteknologi</h4>
-            <p><strong>Konvensional:</strong> fermentasi (yogurt, tempe), pemuliaan tanaman.</p>
-            <p><strong>Modern:</strong> rekayasa genetika (transgenik), kloning, kultur jaringan.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>5. Pemanasan Global</h4>
-            <p><strong>Penyebab:</strong> efek rumah kaca (CO₂, CH₄), deforestasi, polusi industri.</p>
-            <p><strong>Dampak:</strong> perubahan iklim, naiknya permukaan laut, gangguan ekosistem.</p>
-            <p><strong>Solusi:</strong> energi terbarukan, hemat listrik, transportasi ramah lingkungan.</p>
-        </div>
-    </section>
-
-    <section id="tips" class="grade-section">
-        <h2>Tips Belajar IPA Efektif</h2>
-        
-        <div class="topic-card">
-            <h4>1. Pahami Konsep Dasar</h4>
-            <p>Jangan hanya menghafal rumus, tapi pahami konsepnya. Misalnya, pahami mengapa benda bisa mengapung (konsep massa jenis) daripada hanya menghafal rumus ρ = m/V.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>2. Buat Mind Map</h4>
-            <p>Buat diagram yang menghubungkan konsep-konsep terkait. Contoh: buat mind map tentang "Energi" dengan cabang-cabang bentuk energi, perubahan energi, dan contohnya.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>3. Latihan Soal Bervariasi</h4>
-            <p>Kerjakan soal dengan berbagai tipe: hitungan, analisis gambar, dan penerapan konsep. Perhatikan soal-soal dalam kisi-kisi sebagai panduan.</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>4. Belajar dari Lingkungan</h4>
-            <p>Amati fenomena IPA di sekitar: mengapa sendok terasa dingin (konduksi), mengapa ada embun di pagi hari (pengembunan).</p>
-        </div>
-
-        <div class="topic-card">
-            <h4>5. Diskusi Kelompok</h4>
-            <p>Diskusikan konsep yang sulit dengan teman. Mengajar orang lain adalah cara terbaik untuk memastikan Anda benar-benar paham.</p>
-        </div>
-    </section>
-
+    
+    
+    <!-- Footer -->
     <footer>
-        <p>© 2023 Panduan Belajar IPA - Disusun berdasarkan Kisi-Kisi Kurikulum K-13 & Merdeka</p>
-        <p>Untuk pembelajaran lebih lanjut, konsultasikan dengan guru IPA: Ms. Lina</p>
+        <div class="container">
+            <div class="hashtags">
+                <strong>#ReflectionMovie</strong> | <strong>#WhoWillSurviveThePast</strong>
+            </div>
+            <div class="social-links">
+COMING SOON
+            </div>
+            <p class="quote">"Les gens..."</p>
+            <p class="copyright">© 2025 Group 3rd SMPS PLUS SETIA BUDI. All Rights Reserved.</p>
+        </div>
     </footer>
+    
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
-  </html>
+</html>
